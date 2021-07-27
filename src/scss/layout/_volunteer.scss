@@ -1,0 +1,99 @@
+// ==================================================================
+// VOLUNTEER
+// ==================================================================
+
+#volunteer {
+    @extend %margin-top-50;
+    @extend %margin-bottom-50;
+}
+
+.volunteer {
+    @include mq('lg') {
+        padding: 30px 50px 50px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    ol {
+        padding-left: 15px;
+    }
+
+    strong {
+        display: block;
+    }
+
+    table {
+        table {
+            th {
+                text-align: left;
+            }
+        }
+    }
+
+    .become-vol {
+        text-align: center;
+    }
+
+    @include e(content) {
+        margin-top: 50px;
+
+        a {
+            display: block;
+            font-size: em(15px);
+            padding: 4px 0px;
+            transition: color $transition ease-in-out;
+
+            &:hover {
+                color: color(primary);
+            }
+        }
+
+        .volu_card {
+            border-bottom: 2px solid color(primary, x-light);
+
+            h3 {
+                font-size: em(19px);
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 3px 12px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.vlforms {
+    @extend %margin-top-50;
+    @extend %margin-bottom-80;
+    @include m('form') {
+        .slv {
+            background-color: $white;
+            text-align: center;
+            padding-top: 15px;
+
+            img {
+                width: 120px;
+                object-fit: cover;
+                margin: auto;
+            }
+
+            @include e(content) {
+                padding: 15px;
+            }
+        }
+
+        form {
+            background-color: $white;
+            padding: 25px;
+        }
+    }
+}

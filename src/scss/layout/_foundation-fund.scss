@@ -1,0 +1,31 @@
+// ==============================================================================
+// FOUNDATION FUND
+// ==============================================================================
+
+.foundation {
+    @include e('fund') {
+        background-color: $white;
+        border-radius: 4px;
+        padding: 30px 50px 50px;
+        table {
+            thead {
+                th {
+                    background-color: color(primary);
+                    color: $white;
+                    border: 1px solid color(primary);
+                }
+            }
+            td,th {
+                border: 1px solid color(grey, light);
+            }
+        }
+        article {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    };
+
+    @include e('pagination') {
+        @include flexy($just: flex-end);
+    }
+}

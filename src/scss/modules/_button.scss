@@ -1,0 +1,42 @@
+// =========================================================================
+// BUTTON
+// =========================================================================
+
+%btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    @include mq('md') {
+        display: inline-block;
+    }
+    padding: 5px 20px;
+    font-size: em(18px);
+    font-weight: $font-weight--md;
+    line-height: (36px/18px);
+    border-radius: $br-radius;
+    color: $white;
+    text-align: center;
+    margin-top: em(20px, 18px);
+}
+
+.btn {
+    @extend %btn;
+    @include m(primary) {
+        background-color: color(primary);
+    }
+    @include m(secondary) {
+        background-color: color(black, light);
+    }
+    @include m(small) {
+        background-color: color(primary);
+        font-size: em(14px);
+        padding: 3px 10px;
+    }
+}
+
+.btn + .btn {
+    @include mq('lg') {
+        margin-left: 20px;
+    }
+}

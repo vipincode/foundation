@@ -1,0 +1,14 @@
+.site-container {
+    width: 96%;
+    max-width: $max-width - 300px;
+    margin: 0 auto;
+
+    @include mq('lg') {
+        width: 90%;
+    }
+
+    @include mq('xxl') {
+        width: 85%;
+        max-width: $max-width;
+    }
+}

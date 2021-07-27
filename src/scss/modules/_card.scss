@@ -1,0 +1,95 @@
+// =====================================================================
+//  CARD [OVERLAY]
+// =====================================================================
+
+.card {
+    background-color: $white;
+    border-radius: $br-radius;
+    overflow: hidden;
+    transition: transform $transition ease-in, box-shadow $transition ease-in;
+    position: relative;
+    &:hover {
+        box-shadow: 0 0 35px rgba($black, 0.06);
+        transform: translateY(-10px);
+    }
+    @include e('content') {
+        padding: em(20px);
+    }
+}
+
+// =====================================================================
+//  V-CARD
+// =====================================================================
+
+.vCard {
+    background-color: $white;
+    border-radius: $br-radius;
+    overflow: hidden;
+    transition: transform $transition ease-in, box-shadow $transition ease-in;
+    &:hover {
+        box-shadow: 0 0 35px rgba($black, 0.06);
+        transform: translateY(-10px);
+    }
+    @include e('images') {
+        overflow: hidden;
+        img {
+            transform-origin: 34% 12%;
+            transform: scale(1.1);
+            transition: transform $transition ease-in;
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+    @include e('content') {
+        padding: em(20px);
+        @include m('progessbar') {
+            .progress {
+                height: 13px;
+                background-color: color(grey, x-light);
+                overflow: visible;
+                @extend%margin-top-50;
+            }
+            .progress-bar {
+                background-color: color(primary);
+                position: relative;
+                overflow: visible;
+                span {
+                    top: -33px;
+                    right: 0;
+                    position: absolute;
+                    color: $white;
+                    font-weight: $font-weight--md;
+                    background: color(primary);
+                    padding: 2px;
+                    @include p-el($el: 'after', $el-width: 0, $el-height: 0) {
+                        bottom: -3px;
+                        right: 0;
+                        border-style: solid;
+                        border-width: 3px 2px 0 2px;
+                        border-color: color(primary) transparent transparent transparent;
+                    }
+                }
+            }
+        }
+        @include m('collection') {
+            ul {
+                @include flexy($just: space-between);
+                margin-top: em(24px);
+            }
+            span {
+                font-size: em(14px);
+                strong {
+                    font-size: em(16px, 14px);
+                    font-weight: $font-weight--xl;
+                }
+            }
+        }
+        a {
+            transition: color $transition ease-in;
+            &:hover {
+                color: color(primary);
+            }
+        }
+    }
+}

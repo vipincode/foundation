@@ -1,0 +1,128 @@
+// =================================================================
+//  NAVBAR
+// =================================================================
+
+.navbar {
+    box-shadow: 0 10px 15px rgba($black, 0.07);
+    @include e(top) {
+        padding: 6px 0px;
+        border-bottom: 1px solid color(grey, light);
+        .btn--donate {
+            padding: 7px 10px;
+            font-size: em(14px);
+            font-weight: $font-weight--md;
+            background-color: color(primary);
+            color: $white;
+            border-radius: $br-radius;
+            &:hover {
+                color: $white;
+            }
+            @include mq('xs') {
+                display: none;
+            }
+        }
+        .btn--donate + .btn--donate {
+            @include mq(lg) {
+                margin-left: 15px;
+            }
+        }
+    }
+   .icons {
+        li {
+            display: inline-block;
+        }
+        a {   
+            font-size: em(14px); 
+            display: block;
+            padding: 8px 8px;
+            color: color(grey, dark);
+            @include mq('xs') {
+                &:first-child {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+    
+    @include e('socials') {
+        @include flexy($wrap: wrap, $just: space-between, $align: center);
+    } 
+
+    @include e('nav') {
+        @include flexy($wrap: wrap, $just: space-between, $align: center);
+        padding: 5px 0px;
+        ul {
+            li {
+                display: inline-block;
+                position: relative;
+                .sub__nav--link {
+                    li {
+                        display: block;
+                        border-bottom: 1px dotted color(grey, light);
+                        &:last-child {
+                            border: none;
+                        }
+                    }
+                    a {
+                        padding: 6px 10px;
+                    }
+                }
+            }
+            a {
+                display: block;
+                padding: 8px 12px;
+                font-weight: $font-weight--lg;
+                transition: color $transition ease-in;
+                font-size: em(17px);
+                @include mq('lg') {
+                    font-size: em(15px);
+                }
+                @include mq('xl') {
+                    font-size: em(17px);
+                }
+                &:hover {
+                    color: color(primary);
+                }
+            }
+        }
+       .sub {
+            @include e(nav) {
+                @include m(link) {
+                    background-color: $white;
+                    border: 1px solid color(grey, light);
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    width: 230px;
+                    display: none;
+                    z-index: 9;
+                }
+                &:hover .sub__nav--link {
+                    display: block;
+                }
+            }
+       }
+    }
+    @include e('bottom') {
+        background-color: $white;
+        padding: 6px 0px;
+        .logo {
+            width: 150px;
+            @include mq('xl') {
+                width: 165px;
+            }
+        }
+    } 
+}
+// =================================================================================================
+//  NAVBAR CONTAINER
+// =================================================================================================
+
+.nav-container {
+    padding-left: 12px;
+    padding-right: 12px;
+    @include mq(lg) {
+        width: 95%;
+        margin: 0 auto;
+    }
+}

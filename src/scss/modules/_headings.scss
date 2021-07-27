@@ -1,0 +1,65 @@
+// ================================================================
+// TYPOGRAPHY
+// ================================================================
+
+.heading {
+    @include e(xl) {
+        @extend %heading-xl;
+    }
+    @include e(lg) {
+        @extend %heading-lg;
+    }
+    @include e(md) {
+        @extend %heading-md;
+    }
+    @include e(sm) {
+        @extend %heading-sm;
+    }
+    @include e(xs) {
+        @extend %heading-xs;
+    }
+}
+
+.accent {
+    font-size: em(20px);
+    line-height: (34px / 23px);
+    font-weight: $font-weight--sm;
+    @include mq('lg') {
+        font-size: em(23px);
+        line-height: (36px / 23px);
+    }
+}
+
+// ================================================================
+// TEXT EFFECTS [ANIME JS]
+// ================================================================
+
+.anime-text {
+  position: relative;
+  font-size: em(38px);
+  line-height: (43px/38px);
+  font-weight: $font-weight--xxl;
+  @include mq('md') {
+     font-size: em(48px);
+    line-height: (53px/48px);
+  }
+  @include mq('lg') {
+    font-size: em(96px);
+    line-height: (120px/96px);
+  }
+}
+
+.anime-text .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.anime-text .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}

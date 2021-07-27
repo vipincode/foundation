@@ -1,0 +1,49 @@
+// ======================================================================
+//  MEMBER
+// ======================================================================
+
+#member {
+    @extend %margin-80;
+}
+
+.member {
+    p {
+        margin-bottom: 15px;
+    }
+    h2 {
+        border-left: 4px solid color(primary);
+        line-height: 1;
+        padding-left: 15px;
+    }
+    a {
+        display: block;
+        padding: 4px 0px;
+        transition: color $transition ease-in-out;
+        &:hover {
+            color: color(primary);
+        }
+    }
+    .mm-card {
+        border-bottom: 2px solid color(primary, x-light);
+        h3 {
+            font-size: em(19px);
+        }
+        p {
+            font-size: em(15px);
+        }
+    }
+    #benefit {
+        width: 75%;
+        max-width: 700px;
+        margin: 0 auto;
+        @extend .text-center;
+        ul {
+            li {
+                span {
+                    display: inline-block;
+                    color: color(primary);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+// =======================================================================
+//  FORMS ELEMENT
+// =======================================================================
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    outline: none;
+    border: 1px solid color(grey, light);
+    padding: 3px 16px;
+    border-radius: $br-radius;
+    font-size: em(15px);
+    font-weight: $font-weight--sm;
+    line-height: (38px/15px);
+    width: 100%;
+}
+
+select {
+    padding: 7px 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 12px;
+    font-weight: $font-weight--md;
+}
+
+// ========================================================================
+//  TABLE
+// ========================================================================
+
+table {
+    min-width: 1040px;
+    text-align: center;
+    border-collapse: collapse;
+    @include mq('lg') {
+        min-width: 100%;
+    }
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+}
+
+// ========================================================================
+//  PAGINATION
+// ========================================================================
+
+.pagination {
+    .page-link {
+        color: color(primary);
+        &:focus {
+            box-shadow: none;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

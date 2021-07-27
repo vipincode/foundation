@@ -1,0 +1,78 @@
+
+// ===================================================================
+// BEM SELECTORS
+// ===================================================================
+
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+//COLOR
+
+@mixin bg-color($map) {
+    @each $theme, $color in $map {
+        &__#{$theme} {
+            color: $color;
+        }
+    }
+}
+
+// FLEXY 
+
+@mixin flexy($disp: flex, $dir: null, $just: null, $wrap: null, $align: null) {
+	display: $disp;
+	flex-wrap: $wrap;
+	justify-content: $just;
+	align-items: $align;
+    flex-direction: $dir;
+}
+
+// ===================================================================
+//                PSEUDO ELEMENT MIXINS
+// ===================================================================
+
+@mixin p-el($el, $el-width, $el-height) {
+    @if $el=="before"or $el=="after" {
+        &:#{$el} {
+            @extend %pseudos;
+            width: $el-width;
+            height: $el-height;
+            @content;
+        }
+    }
+    @else {
+        @warn "`#{$el}` is not a valid pseudo-element.";
+    }
+}
+
+// ===================================================================
+// MEDIA QUERY
+// ===================================================================
+
+@mixin mq($break) {
+    $value: map-get($map: $breakpoints, $key: $break);
+    $sm: map-get($map: $breakpoints, $key: 'sm');
+
+    @if ($break == null) {
+        @error "`#{$break}` is not a valid break point";
+    } 
+    @else if ($value < $sm) {
+        @media(max-width: $value) {
+			@content;
+		}
+    }
+    @else {
+        @media(min-width: $value) {
+			@content;
+		}
+    }
+}
+

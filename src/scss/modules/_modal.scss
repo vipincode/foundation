@@ -1,0 +1,17 @@
+// ============================================================================
+// MODAL
+// ============================================================================
+
+.modal {
+    .btn-close {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+    }
+    .modal-header {
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        color: $white;
+    }
+}

@@ -1,0 +1,81 @@
+// ==========================================================================
+// FOOTER
+// ==========================================================================
+
+#footer {
+    background-color: color(black);
+    padding: 60px 0px 15px;
+    position: relative;
+    z-index: 2;
+    @include p-el('after', 100%, 100%) {
+        top: 0;
+        left: 0;
+        background-color: color(black);
+        background-image: url('../../images/footer.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        opacity: 0.10;
+        z-index: -1;
+    }
+}
+
+.footer {
+    color: $white;
+   &-logo {
+       font-size: em(22px);
+       text-transform: uppercase;
+        a {
+            color: color(primary);
+            span {
+                font-weight: $font-weight--sm;
+                font-size: em(18px, 22px);
+                border-left: 1px solid $white;
+                padding-left: 15px;
+                margin-left: 15px;
+                color: $white;
+            }
+        }
+   }
+   p {
+       font-size: em(17px);
+       font-weight: $font-weight--xs;
+   }
+   .ft-icons {
+       @extend %margin-top-50;
+       li {
+        display: inline-block;
+        margin-right: 18px;
+       }
+       a {
+           color: color(primary, x-light);
+           display: inline-block;
+           transition: color $transition ease-in;
+           &:hover {
+               color: $white;
+           }
+       }
+   }
+   .imp-links {
+       a {
+           color: $white;
+           transition: color $transition ease-in;
+           &:hover {
+               color: color(primary);
+           }
+       }
+   }
+   .copyright {
+       text-align: center;
+       @extend %margin-top-50;
+       a {
+        color: color(primary);
+       }
+   }
+   .ft-funds {
+       a {
+           display: block;
+           @extend %margin-top-50;
+       }
+   }
+}

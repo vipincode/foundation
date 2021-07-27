@@ -1,0 +1,81 @@
+// =============================================================
+// MOBILE MENU
+// =============================================================
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+.navbar__nav {
+    ul {
+        display: none;
+        @include mq('lg') {
+            display: block;
+        }
+    }
+
+    .hamburger {
+        padding: 0;
+        z-index: 99;
+        @include mq('lg') {
+            display: none;
+        }
+    }
+}
+
+.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: color(black, light);
+    width: 100%;
+    max-width: 300px; 
+    z-index: 99;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform $transition ease-in-out;
+    @include mq('md') {
+        max-width: 500px;
+    }
+    @include mq('lg') {
+        display: none;
+    }
+
+    nav {
+        padding: 35px;
+        ul {
+            a {
+                color: $white;
+                display: block;
+                padding: 8px 0px;
+                font-size: em(18px);
+                font-weight: $font-weight--md;
+            }
+           .btn-donate {
+               background-color: color(primary);
+               margin-top: 35px;
+               text-align: center;
+           }
+        }
+    }
+}
+
+.main-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, 0.55);
+    z-index: 55;
+    display: none;
+    @include mq('lg') {
+        display: none;
+    }
+}
+
+body.menu__is--active .mobile {
+    transform: translate3d(0, 0, 0);
+}
+
+body.menu__is--active .js__main--overlay {
+    display: block;
+}
