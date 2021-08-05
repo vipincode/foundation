@@ -28,6 +28,14 @@
     @include m(secondary) {
         background-color: color(black, light);
     }
+    @include m(white) {
+        border: 2px solid $white;
+        transition: background-color $transition ease-in, color $transition ease-in;
+        &:hover {
+            background-color: $white;
+            color: color(black);
+        }
+    } 
     @include m(small) {
         background-color: color(primary);
         font-size: em(14px);

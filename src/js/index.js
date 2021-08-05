@@ -24,6 +24,17 @@ const slVolunteer = new Swiper(".slVolunteer", {
   }
 });
 
+const teamSlider = new Swiper(".team-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination2",
+    clickable: true,
+  },
+});
+
+
+
 // ==============================================================
 // STICKY NAVBAR
 // ==============================================================
@@ -38,7 +49,6 @@ function stickyNavbar() {
     navbar.classList.remove("sticky");
   }
 }
-
 if(navbar) {
     window.onscroll = function() {stickyNavbar()};
 }
@@ -92,3 +102,14 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  // ===================================================================
+//                    LIGHTBOX
+// ===================================================================
+
+import GLightbox from 'glightbox';
+const lightbox = GLightbox({
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true
+});

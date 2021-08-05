@@ -13,4 +13,60 @@
             }
         }
     }
+    @include e('team') {
+        .em-card {
+            background-color: color(grey, x-light);
+            .em-card--main {
+                @include flexy();
+                .em-card--image {
+                    display: flex;
+                }
+            }
+            article {
+                padding: 15px 12px 4px;
+                position: relative;
+                h3 {
+                    font-size: em(17px);
+                    margin-bottom: 0;
+                    line-height: (17px/17px);
+                }
+                span {
+                    font-size: em(15px);
+                }
+                p {
+                    font-size: em(16px);
+                }
+                ul {
+                   position: absolute;
+                   width: 100%;
+                   top: 185px;
+                    li {
+                        display: inline-block;
+                        font-size: em(15px);
+                        a {
+                            display: block;
+                            color: color(grey);
+                            padding: 2px 6px;
+                            transition: color $transition ease-in;
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                            &:hover {
+                                color: color(primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .team-slider {
+        padding-bottom: 20px;
+        .swiper-pagination {
+            bottom: -4px;
+            .swiper-pagination-bullet {
+                background-color: color(primary);
+            }
+        }
+    }
 }

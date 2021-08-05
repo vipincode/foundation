@@ -8,12 +8,22 @@
     overflow: hidden;
     transition: transform $transition ease-in, box-shadow $transition ease-in;
     position: relative;
+    height: 100%;
     &:hover {
         box-shadow: 0 0 35px rgba($black, 0.06);
         transform: translateY(-10px);
     }
     @include e('content') {
         padding: em(20px);
+        height: 100%;
+        @include flexy($dir: column);
+        img {
+            align-self: start;
+        }
+        a {
+            margin-top: auto;
+            align-self: start;
+        }
     }
 }
 
