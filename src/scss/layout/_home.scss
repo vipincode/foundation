@@ -18,6 +18,11 @@
         span {
             font-size: em(42px);
         }
+        .card__content {
+            ol {
+                padding-left: 20px;
+            }
+        }
     }
 }
 
