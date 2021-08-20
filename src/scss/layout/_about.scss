@@ -1,21 +1,49 @@
 // ==================================================================
 // ABOUT
 // ==================================================================
+.table-striped > tbody > tr:nth-of-type(odd) {
+    --bs-table-accent-bg: transparent;
+    color: var(--bs-table-striped-color);
+}
 
 .story {
     @include e(content) {
         table {
+            border-radius: $br-radius;
+            overflow: hidden;
             th, td {
                 text-align: left;
+                font-size: em(15px);
+                border: 1px solid color(primary, xx-light);
             }
             table {
                 padding-left: 15px;
+                tr {
+                    &:nth-child(odd) {
+                        background-color: transparent;
+                    }
+                }
+            }
+            th {
+                color: color(primary);
+            }
+            tr {
+                &:nth-child(odd) {
+                    background-color: color(primary, xx-light);
+                }
             }
         }
+        p {
+            font-size: em(15px);
+        }
+        background-color: transparent;
     }
     @include e('team') {
         .em-card {
-            background-color: color(grey, x-light);
+            background-color: color(primary, light);
+            color: color(primary, xx-light);
+            border-radius: $br-radius;
+            overflow: hidden;
             .em-card--main {
                 @include flexy();
                 .em-card--image {
@@ -45,7 +73,7 @@
                         font-size: em(15px);
                         a {
                             display: block;
-                            color: color(grey);
+                            color: color(primary, xx-light);
                             padding: 2px 6px;
                             transition: color $transition ease-in;
                             &:first-child {
@@ -60,6 +88,9 @@
             }
         }
     }
+    .right-cols {
+        background-color: color(primary, xx-light)
+    }
     .team-slider {
         padding-bottom: 20px;
         .swiper-pagination {
@@ -67,6 +98,12 @@
             .swiper-pagination-bullet {
                 background-color: color(primary);
             }
+        }
+    }
+    .abt-mission {
+        padding: 30px 0px;
+        @include mq('lg') {
+            padding: 50px;
         }
     }
 }

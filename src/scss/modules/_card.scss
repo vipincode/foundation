@@ -17,12 +17,17 @@
         padding: em(20px);
         height: 100%;
         @include flexy($dir: column);
+        h3 {
+            font-size: em(18px);
+            font-weight: $font-weight--xxl;
+        }
         img {
             align-self: start;
         }
         a {
             margin-top: auto;
             align-self: start;
+            font-size: em(14px);
         }
     }
 }

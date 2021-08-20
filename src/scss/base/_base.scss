@@ -17,7 +17,6 @@ body {
     line-height: ($base-line / $base-font--size);
     color: color(black, light);
     font-weight: $font-weight--sm;
-    background-color: color(grey, x-light);
 }
 
 // TEXT
@@ -69,7 +68,6 @@ h6 {
 }
 
 p {
-    font-size: em(18px);
     margin: 0px;
 }
 

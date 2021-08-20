@@ -32,10 +32,6 @@
         }
     }
 
-    .become-vol {
-        text-align: center;
-    }
-
     @include e(content) {
         margin-top: 50px;
 
@@ -51,8 +47,6 @@
         }
 
         .volu_card {
-            border-bottom: 2px solid color(primary, x-light);
-
             h3 {
                 font-size: em(19px);
                 margin-top: 10px;

@@ -3,52 +3,22 @@
 // =============================================================================
 
 .banner {
-    height: calc(100vh - 115px);
-    overflow: hidden;
     background: linear-gradient(135deg, $primary-color, $secondary-color);
-    position: relative;
-    @include e('bg') {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 100%;
-        opacity: 0.35;
+    @include e('video') {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 205px;
+        @include mq('md') {
+            height: 400px;
+        }
+        @include mq('lg') {
+            height: calc(100vh - 115px);
+        }
     }
 
-    @include e('content') {
-        @extend %position-center;
-        width: 100%;
-        color: $white;
-        article {
-            width: 100%;
-            @include mq('lg') {
-                width: 75%;
-                max-width: 700px;
-            }
-            .join__us {
-                display: block;
-                @include mq('md') {
-                    display: inline-block;
-                }
-                text-align: center;
-                padding: 5px 30px;
-                font-size: em(18px);
-                font-weight: $font-weight--md;
-                line-height: (30px/18px);
-                border: 2px solid $white;
-                color: $white;
-                border-radius: 30px;
-                margin-right: 30px;
-                transition: background-color $transition ease-in, border 0.3s ease-in;
-                &:hover {
-                    background-color: $secondary-color;
-                    border: 2px solid $secondary-color;
-                }
-            }
-            .join__video {
-                color: $white;
-                font-weight: $font-weight--lg;
-            }
-        }
+    .vipin {
+       height: 100%;
+       width: 100%;
     }
 }

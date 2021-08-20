@@ -15,7 +15,7 @@
   <div class="main-overlay js__main--overlay"></div>
   <div class="site-wrapper">
 
-    <section id="navbar">
+    <section id="navbar" data-aos="fade" data-aos-easing="linear" data-aos-duration="700">
       <div class="navbar">
         <div class="navbar__top">
           <div class="nav-container">
@@ -63,8 +63,8 @@
                 </li>
               </ul>
               <div>
-                <a href="./story.html" class="btn--donate">Success Stories</a>
-                <a href="#" class="btn--donate" data-bs-toggle="modal" data-bs-target="#exampleModal">Donate Now</a>
+                <a href="#" class="btn--donate">Success Stories</a>
+                <a href="#" class="btn--donate" data-bs-toggle="modal-" data-bs-target="#exampleModal">Donate Now</a>
               </div>
             </nav>
           </div>
@@ -77,12 +77,7 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./member.html">Membership</a></li>
                 <li><a href="./volunteer.html">Volunteer</a></li>
-                <li class="sub__nav"><a href="./enterprenure.html">Entrepreneurship</a>
-                  <ul class="sub__nav--link">
-                    <li><a href="#">Agri Entrepreneurship</a></li>
-                    <li><a href="#">Other Entrepreneurship</a></li>
-                  </ul>
-                </li>
+                <li class="sub__nav"><a href="./enterprenure.html">Entrepreneurship</a></li>
                 <li><a href="schemes.html">Government Schemes</a></li>
                 <li><a href="./super-ngo.html">Super NGO</a></li>
               </ul>
@@ -116,7 +111,9 @@
     <section id="sm-banner">
         <div class="site-container">
             <div class="sm-banner">
-                <h1 class="heading__xl">Membership</h1>
+                <h1 class="heading__xl" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Membership</h1>
             </div>
         </div>
     </section>
@@ -126,53 +123,68 @@
         <div class="site-container">
           <div class="row col-12 col-lg-10 offset-lg-1">
             <div class="member">
-              <div id="benefit">
-                  <h1 class="heading__md mb-20">Benefits of <span>Membership</span></h1>
-                  <ul>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Platform to interact with the network. “Network is net worth”.</a></li>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Awareness of business about policies & practices. “Knowledge in the key to success”.</a></li>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Government schemes on subsidies & subvention. “Saving of income is earning of income”.</a></li>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Business counselling. “A decision can make you hero or zero”.</a></li>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Personal counselling. “A person personally satisfied can give greater efforts.”</a></li>
-                      <li><a href="#"><span><i class="fas fa-long-arrow-alt-right"></i></span> Seminars & Webinars</a></li>
-                  </ul>
-              </div>
-              <div class="mt-50">
-                <h1 class="heading__md mb-30 text-center">Membership</h1>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="card mm-card">
-                      <div class="card__content">
-                        <img src="images/normal-member.png" alt="Normal Member">
-                        <article id="n-member">
-                          <h3>Normal Member</h3>
-                          <p>
-                            It is an annual membership plan. With this membership, you will be given proper knowledge
-                            of all such government schemes, which are important for you. If you want to apply under any
-                            of such scheme; DF will arrange all required facilities with at least 20% discount.
-                          </p>
-                        </article>
-                      </div>
+              <h1 class="heading__md mb-30 text-center">Membership</h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card mm-card">
+                    <div class="card__content">
+                      <img src="images/normal-member.png" alt="Normal Member">
+                      <article id="n-member">
+                        <h3>Normal Member</h3>
+                        <p>
+                          It is an annual membership plan. With this membership, you will be given proper knowledge
+                          of all such government schemes, which are important for you. If you want to apply under any
+                          of such scheme; DF will arrange all required facilities with at least 20% discount.
+                        </p>
+                      </article>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="card mm-card">
-                      <div class="card__content">
-                        <img src="images/prime-member.png" alt="Prime Membership">
-                        <article id="p-member">
-                          <h3>Prime Membership</h3>
-                          <p>
-                            It is 3 years membership plan. With this membership, you will be given proper knowledge
-                            of all such government schemes. If you want to apply under any of such scheme; DF
-                            will arrange all required facilities with at least 20% discount. You will be allowed
-                            to join all webinars & seminars free of cost. DF will arrange at least 1 seminar or
-                            webinar in a month for your general awareness causing direct or indirect growth of
-                            your business, skills, knowledge. You will be allowed for your child counselling at
-                            just 50% fees from NGO with field specialist.
-                          </p>
-                        </article>
-                      </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card mm-card">
+                    <div class="card__content">
+                      <img src="images/prime-member.png" alt="Prime Membership">
+                      <article id="p-member">
+                        <h3>Prime Membership</h3>
+                        <p>
+                          It is 3 years membership plan. With this membership, you will be given proper knowledge
+                          of all such government schemes. If you want to apply under any of such scheme; DF
+                          will arrange all required facilities with at least 20% discount. You will be allowed
+                          to join all webinars & seminars free of cost. DF will arrange at least 1 seminar or
+                          webinar in a month for your general awareness causing direct or indirect growth of
+                          your business, skills, knowledge. You will be allowed for your child counselling at
+                          just 50% fees from NGO with field specialist.
+                        </p>
+                      </article>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" mt-50"></div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div id="benefit" data-aos="fade-up"
+                  data-aos-anchor-placement="top-center">
+                    <h1 class="heading__md mb-20">Benefits of <span>Membership</span></h1>
+                    <ul>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Platform to interact with the network.
+                          “Network is net worth”.</a></li>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Awareness of business about policies &
+                          practices. “Knowledge in the key to success”.</a></li>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Government schemes on subsidies &
+                          subvention. “Saving of income is earning of income”.</a></li>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Business counselling. “A decision can
+                          make you hero or zero”.</a></li>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Personal counselling. “A person
+                          personally satisfied can give greater efforts.”</a></li>
+                      <li><a href="#"><span><i class="fas fa-check"></i></span> Seminars & Webinars</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div data-aos="fade-up"
+                    data-aos-anchor-placement="top-center">
+                    <img src="images/membership.png" alt="">
                   </div>
                 </div>
               </div>
@@ -184,7 +196,7 @@
 
     <section id="volun">
       <div class="site-container">
-        <div class="volun">
+        <div class="volun" data-aos="zoom-in" data-aos-duration="1000">
           <a href="#">
             <img src="images/adds.jpg" alt="">
           </a>
@@ -197,45 +209,79 @@
       <div class="site-container">
         <div class="footer">
           <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div>
+            <div class="col-md-6 col-lg-4">
+              <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
                 <h1 class="footer-logo">
                   <img src="images/footer-logo.png" alt="">
                 </h1>
                 <p>
-                  Aliquam sapien sapien, aliquet condimentum imperdiet.
+                  जो कुछ भी  है पास तुम्हारे  वो पर्याप्त विकास को 
                 </p>
                 <ul class="ft-icons">
-                  <li><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
-                  <li><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
-                  <li><a href="#"><span><i class="fa fa-google"></i></span></a></li>
-                  <li><a href="#"><span><i class="fa fa-linkedin"></i></span></a></li>
+                  <li>
+                    <a target="_blank" href="https://www.facebook.com/qpick.services"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://twitter.com/DiptimateL"><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.instagram.com/qpickservices/"><span><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.linkedin.com/company/qpick-services"><span><i class="fa fa-linkedin" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://g.page/diptimateconsultants?share"><span><i class="fa fa-google" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCISgEydNiqXhS1XfGKilOsA"><span> <i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://in.pinterest.com/diptimateconsultants"><span><i class="fa fa-pinterest-p" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.reddit.com/user/DiptimateConsultants"><span><i class="fa fa-reddit" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.quora.com/profile/Diptimate-Consultants-Pvt-Ltd"><span> <i class="fa fa-quora" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.tumblr.com/blog/diptimateconsutants"><span><i class="fa fa-tumblr-square" aria-hidden="true"></i></span></a>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <h3 class="heading__xs">Contact Info</h3>
-              <address>
-                <p><strong>Address :</strong> C-1/65, Vineet Khand
-                  Gomti Nagar, Lucknow Uttar Pradesh 226010</p>
-                <p><strong>Phone :</strong> +8880 44338899</p>
-                <p><strong>Email :</strong> info@colorlib.com</p>
-              </address>
+            <div class="col-md-6 col-lg-3">
+              <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
+                <h3 class="heading__xs">Contact Info</h3>
+                <address>
+                  <p><strong>Address :</strong> C-1/65, Vineet Khand
+                    Gomti Nagar, Lucknow Uttar Pradesh 226010</p>
+                  <p><strong>Phone :</strong></p>
+                  <a href="#">0522 – 356 7620,</a>
+                  <a href="#">+91-93356 88885,</a>
+                  <a href="#">+91-90440 53006</a>
+                  <p><strong>Email :</strong> sales@diptimate.com</p>
+                </address>
+              </div>
             </div>
             <div class="col-md-6 col-lg-3">
-              <h3 class="heading__xs">Important Link</h3>
-              <div class="imp-links">
-               <ul>
-                 <li><a href="#">View Project</a></li>
-                 <li><a href="#">Contact Us</a></li>
-                 <li><a href="#">Testimonial</a></li>
-                 <li><a href="#">Proparties</a></li>
-                 <li><a href="#">Support</a></li>
-               </ul>
+              <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h3 class="heading__xs">Important Link</h3>
+                <div class="imp-links">
+                 <ul>
+                   <li><a href="https://ngodarpan.gov.in/">NGO Darpan</a></li>
+                   <li><a href="https://agriinfra.dac.gov.in/">Agri Infra Fund Application</a></li>
+                   <li><a href="https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp">PMEGP Application</a></li>
+                   <li><a href="https://msme.gov.in/">MSME Loans Application</a></li>
+                   <li><a href="http://qpickservices.com/">Qpick Suvidha Center</a></li>
+                   <li><a href="http://diptimate.com/">Diptimate Consultants</a></li>
+                 </ul>
+              </div>
               </div>
             </div>
             <div class="col-lg-2">
-              <div class="ft-funds">
+              <div class="ft-funds" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1800">
                 <a href="#" class="btn btn--white">Foundation Fund</a>
               </div>
             </div>

@@ -24,7 +24,6 @@
         }
     }
     .mm-card {
-        border-bottom: 2px solid color(primary, x-light);
         h3 {
             font-size: em(19px);
         }
@@ -33,10 +32,6 @@
         }
     }
     #benefit {
-        width: 75%;
-        max-width: 700px;
-        margin: 0 auto;
-        @extend .text-center;
         ul {
             li {
                 span {

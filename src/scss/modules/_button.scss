@@ -23,21 +23,25 @@
 .btn {
     @extend %btn;
     @include m(primary) {
-        background-color: color(primary);
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
     }
     @include m(secondary) {
-        background-color: color(black, light);
+        background: linear-gradient(135deg, $red, $orange);
     }
     @include m(white) {
-        border: 2px solid $white;
-        transition: background-color $transition ease-in, color $transition ease-in;
+        background-color: color(primary, x-light);
+        color: $secondary-color;
+        border: 1px solid color(primary, light);;
+        box-shadow: -4px 4px color(primary, light), -3px 3px color(primary, light), -2px 2px color(primary, light);
+        transition: transform $transition ease-in;
         &:hover {
-            background-color: $white;
-            color: color(black);
+            @include mq('lg') {
+                transform: scale(1.2);
+            }
         }
     } 
     @include m(small) {
-        background-color: color(primary);
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
         font-size: em(14px);
         padding: 3px 10px;
     }

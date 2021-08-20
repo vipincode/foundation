@@ -12,16 +12,18 @@ $font-weight--xl     : 600;
 $font-weight--xxl    : 700; 
 
 // COLORS
-$color-orange        : #fe6705;
-$color-red           : #f32853;
+$color-light--blue   : #2DA8EC;
+$color-blue          : #0043A6;
 $white               : #ffffff;
 $grey                : #b2bec3;
 $black               : #0b0b0b;
+$red                 : #f32853;
+$orange              : #fe6705;
 
 // USAGE COLOR
 
-$primary-color: $color-orange;
-$secondary-color: $color-red;
+$primary-color       : $color-light--blue;
+$secondary-color     : $color-blue ;
 
 
 // MAPS
@@ -41,10 +43,11 @@ $color-palettes      : (
 		dark     : darken($black, 20%),
 	),
 	primary      : (
-		x-light  : lighten($color-orange, 30%),
-		light    : lighten($color-orange, 17%),
-		base     : $color-orange,
-		dark     : darken($color-orange, 20%),
+		xx-light : lighten($primary-color, 42%),
+		x-light  : lighten($primary-color, 30%),
+		light    : lighten($primary-color, 17%),
+		base     : $primary-color,
+		dark     : darken($primary-color, 20%),
 	),
 );
 
@@ -59,6 +62,7 @@ $ui-colors       : (
 // Text
 $base-font--size     : 16px;
 $base-line           : 28px;
+$letter-space        : 1px;
 
 // TRANSITION
 $transition          : 0.3s;

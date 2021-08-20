@@ -31,6 +31,7 @@
 // ==================================================================
 #foundation {
     @extend %margin-top-50;
+    background-color: color(primary, xx-light);
 }
 
 .foundation {
@@ -39,9 +40,6 @@
         .heading__xs {
             color: color(primary);
         }
-    }
-    @include e('image') {
-        @extend %padded-50;
     }
 }
 
@@ -81,7 +79,7 @@
         content: '';
         top: 0;
         left: 0;
-        background: linear-gradient(-90deg, rgba($primary-color, 0.45), rgba($secondary-color, 0.55));
+        background: linear-gradient(-90deg, rgba(#2DA8EC, 0.45), rgba(#2DA8EC, 0.55));
     }
 }
 
